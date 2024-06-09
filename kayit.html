@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Öğrenci Kayıt Formu</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h2>Öğrenci Kayıt Formu</h2>
+    <form action="kayit.php" method="post" enctype="multipart/form-data">
+        <label for="ogrenci_no">Öğrenci No:</label>
+        <input type="text" id="ogrenci_no" name="ogrenci_no" required><br>
+        
+        <label for="parola">Parola:</label>
+        <input type="password" id="parola" name="parola" required><br>
+        
+        <label for="ad">Ad:</label>
+        <input type="text" id="ad" name="ad" required><br>
+        
+        <label for="soyad">Soyad:</label>
+        <input type="text" id="soyad" name="soyad" required><br>
+        
+        <label for="profil_fotografi">Profil Fotoğrafı:</label>
+        <input type="file" id="profil_fotografi" name="profil_fotografi" required><br>
+        
+        <input type="submit" value="Kaydet">
+    </form>
+</body>
+</html>
+
+<style>
+/* Genel stiller */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+
+/* Form konteyneri */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin-top: 20px;
+}
+
+/* Form başlığı */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form etiketleri */
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+    font-weight: bold;
+}
+
+/* Form girişleri */
+input[type="text"],
+input[type="password"],
+input[type="file"],
+input[type="submit"] {
+    width: calc(100% - 22px); /* 20px padding + 2px border */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Dosya girişi stili */
+input[type="file"] {
+    padding: 5px;
+}
+
+/* Gönder düğmesi stili */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Responsive tasarım */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="file"],
+    input[type="submit"] {
+        width: calc(100% - 12px); /* 10px padding + 2px border */
+    }
+}
+</style>
